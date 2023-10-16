@@ -44,6 +44,7 @@ int criacao_personagem() {
     switch (classe) {
     case 1:
         printf("Classe 1 - Combatente\n");
+        printf("Seja bem-vindo, %s!\n", personagem);
         break;
 
     case 2:
