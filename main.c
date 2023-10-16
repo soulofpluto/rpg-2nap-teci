@@ -103,12 +103,17 @@ int prologo_base()
         switch (escolha_primeira_acao) {
             case 1:
                 printf("Você abre e lê a pasta confidencial, nela contém as informações da sua nova missão\n");
+                // Conhecimento do caso + primeiras pistas
                 printf("No primeiro documento você encontra umas fotos da Torre de Londres dos últimos 20 anos todas mostrando de algum ângulo\n"
                 "uma imagem distorcida de uma mulher que pelos trajes indica que ela, em algum momento, era uma nobre.\n"
                 "Além disso, havia uma suave diferença entre as fotos, por mais que a imagem sempre fosse daquela mulher, havia momentos em que"
                 "os seus olhos estavam vermelhos, outros estavam esbranquiçados.");
                 printf("Atrás desse documento, você encontra também um relatório da Ocultos de 2010.");
-                printf("");
+                printf("Nele constam jornais de 1910 até a data da missão relatando o desaparecimento de pessoas na época em que a imagem dessa mulher aparecia,"
+                "o relatório diz que uma equipe com 3 membros da ordem foram designados à missão, no entanto, apenas uma integrante voltou: Valquíria Andrade.\n"
+                "No entanto, Valquíria não voltou sã da missão, os Ocultos tentaram de todos os tratamentos psicológicos e psiquiátricos possíveis mas nada adiantou.\n"
+                "Seja lá o que tiver acontecido naquele local nunca foi reportado com exatidão. Desde então, a Ocultos evitou mandar novos agentes para lá,"
+                "além disso a imagem da mulher nunca mais apareceu, até agora.");
                 break;
             case 2:
                 printf("Você escolheu a Opção 2 bla bla bla\n");
