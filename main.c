@@ -21,8 +21,8 @@ int boas_vindas()
     printf("Cada escolha tem sua consequência, pense antes de tomar uma decisão, ela poderá se tornar motivo de felicidade ou de tristeza!\n");
 }
 
-
-int criacao_personagem() {
+int criacao_personagem()
+{
     int classe = 0;
     char personagem[50];
 
@@ -41,7 +41,8 @@ int criacao_personagem() {
     scanf("%d", &classe);
 
     // Classes e características
-    switch (classe) {
+    switch (classe)
+    {
     case 1:
         printf("Classe 1 - Combatente\n");
         printf("Seja bem-vindo, %s!\n", personagem);
@@ -83,10 +84,15 @@ int criacao_personagem() {
     return classe;
 }
 
-
 int prologo_base()
 {
     int escolha_primeira_acao = 0;
+    int menu_manual = 0;
+    int acompanhante_missao;
+    int classe_agente = 0;
+
+    //Chama criacao_personagem() e atribui o valor retornado à classe_agente -> exemplo para outros momentos no código
+    classe_agente = criacao_personagem();
 
     // Chegada na base e inicio da missão
     printf("Depois de um descanso de uma semana, você recebe a ligação do Presidente da Ordem, Kaiser, te chamando para uma missão e deve ir à base,"
@@ -96,35 +102,72 @@ int prologo_base()
     // Escolha um: seguir para a missão ou
     while (2)
     {
-    printf("No seu armário, encontra uma pasta preta com um post-it dizendo 'CONFIDENCIAL' e ao lado um manual escrito 'MANUAL BÁSICO SOBRE O PARANORMAL E OS OCULTOS'\n");
-    printf("1. Abrir e ler a pasta confidencial\n");
-    printf("2. Abrir e ler o manual básico sobre o Pananormal e os Ocultos\n");
-    scanf("%d", &escolha_primeira_acao);
+        printf("No seu armário, encontra uma pasta preta com um post-it dizendo 'CONFIDENCIAL' e ao lado um manual escrito 'MANUAL BÁSICO SOBRE O PARANORMAL E OS OCULTOS'\n");
+        printf("1. Abrir e ler a pasta confidencial\n");
+        printf("2. Abrir e ler o manual básico sobre o Pananormal e os Ocultos\n");
+        scanf("%d", &escolha_primeira_acao);
 
-        switch (escolha_primeira_acao) {
+        switch (escolha_primeira_acao)
+        {
+        case 1:
+            printf("Você abre e lê a pasta confidencial, nela contém as informações da sua nova missão\n");
+            // Conhecimento do caso + primeiras pistas
+            printf("No primeiro documento você encontra umas fotos da Torre de Londres dos últimos 20 anos, todas mostrando de algum ângulo\n"
+                   "uma imagem distorcida de uma mulher que pelos trajes indica que ela, em algum momento, era uma nobre.\n"
+                   "Além disso, havia uma suave diferença entre as fotos, por mais que a imagem sempre fosse daquela mulher, havia momentos em que"
+                   "os seus olhos estavam vermelhos, outros estavam esbranquiçados.");
+            printf("Atrás desse documento, você encontra também um relatório da Ocultos de 2010.\n");
+            printf("Nele constam jornais de 1910 até a data da missão relatando o desaparecimento de pessoas na época em que a imagem dessa mulher aparecia,\n"
+                   "o relatório diz que uma equipe com 3 membros da ordem foi designada para a missão, no entanto, apenas uma integrante voltou: Valquíria Andrade.\n"
+                   "No entanto, Valquíria não voltou sã da missão, os Ocultos tentaram todos os tratamentos psicológicos e psiquiátricos possíveis, mas nada adiantou.\n"
+                   "Seja lá o que tiver acontecido naquele local nunca foi reportado com exatidão. Desde então, a Ocultos evitou mandar novos agentes para lá,\n"
+                   "além disso a imagem da mulher nunca mais apareceu, até agora.");
+            break;
+
+        case 2:
+            printf("Você escolheu abrir o manual básico sobre o Paranormal e os Ocultos\n");
+            printf("Menu:");
+            switch (menu_manual)
+            {
             case 1:
-                printf("Você abre e lê a pasta confidencial, nela contém as informações da sua nova missão\n");
-                // Conhecimento do caso + primeiras pistas
-                printf("No primeiro documento você encontra umas fotos da Torre de Londres dos últimos 20 anos todas mostrando de algum ângulo\n"
-                "uma imagem distorcida de uma mulher que pelos trajes indica que ela, em algum momento, era uma nobre.\n"
-                "Além disso, havia uma suave diferença entre as fotos, por mais que a imagem sempre fosse daquela mulher, havia momentos em que"
-                "os seus olhos estavam vermelhos, outros estavam esbranquiçados.");
-                printf("Atrás desse documento, você encontra também um relatório da Ocultos de 2010.");
-                printf("Nele constam jornais de 1910 até a data da missão relatando o desaparecimento de pessoas na época em que a imagem dessa mulher aparecia,"
-                "o relatório diz que uma equipe com 3 membros da ordem foram designados à missão, no entanto, apenas uma integrante voltou: Valquíria Andrade.\n"
-                "No entanto, Valquíria não voltou sã da missão, os Ocultos tentaram de todos os tratamentos psicológicos e psiquiátricos possíveis mas nada adiantou.\n"
-                "Seja lá o que tiver acontecido naquele local nunca foi reportado com exatidão. Desde então, a Ocultos evitou mandar novos agentes para lá,"
-                "além disso a imagem da mulher nunca mais apareceu, até agora.");
+                printf("O Paranormal\n");
+                printf("O que é? O que causa? Por que lutamos contra?");
                 break;
             case 2:
-                printf("Você escolheu a Opção 2 bla bla bla\n");
-                return 0;
+                printf("Os Ocultos\n");
+                printf("O que são? O que fazem? Onde ficam? Há só eles?");
+                break;
             default:
                 printf("Opção inválida. Tente novamente.\n");
-        }
+                break;
+            }
+            break;
 
+        default:
+            printf("Opção inválida. Tente novamente.\n");
+            break;
+        }
     }
+
+    // Quem vai acompanhar na missão?
+    printf("Ao reconher suas coisas e analisar, 2 agentes se aproximam de você. Ambos já foram vistos na base em alguns momentos mas vocês nunca interagiram.\n");
+    printf("Arnaldo: Ah, você deve ser %s! Ouvi falar muito bem de você. O Senhor Kaise nos mandou conversar com você e ver se você vai querer ajuda na sua missão.\n"
+    "Essa aqui é a Darnele, uma colega. Já fomos em missões juntos.");
+    printf("Darnele: Oi, tudo bom? Queremos saber qual de nós dois você quer que te acompanhe.");
+
+    switch (acompanhante_missao)
+    {
+    case 1:
+        if (classe_agente==1)
+        {
+            
+        }
+        
+        break;
     
+    default:
+        break;
+    }
 }
 
 int main()
