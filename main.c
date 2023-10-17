@@ -120,7 +120,10 @@ int prologo_base()
             {
             case 1:
                 printf("O Paranormal\n");
-                printf("O que é? O que causa? Por que lutamos contra?");
+                printf("O Paranormal refere-se às coisas que não são possíveis de explicar cientificamente, são acontecimentos tanto benignos quanto malignos que ocorrem ao nosso redor."
+                "Os episódios paranormais geralmente se dão em razão de assuntos inacabados deixados pelas pessoas em nosso plano, sejam eles sentimentos de vingança ou raiva ou somente" 
+                " a vontade de se comunicar a fim de passar uma mensagem ou aviso. Os ocultos vem combatendo o paranormal há anos para que as pessoas possam se sentir seguras,"
+                " além de ajudar ao combate de danos à saúde mental dos afetados.");
                 break;
             case 2:
                 printf("Os Ocultos\n");
@@ -195,11 +198,11 @@ int prologo_base()
 
     }
 
-    int cena_chegada_torre(){
+int cena_chegada_torre(){
 
-        return 0;
-
-    }
+    return 0;
+    
+}
 
 int main()
 {
