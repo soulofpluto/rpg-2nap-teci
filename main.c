@@ -39,6 +39,8 @@ void criacao_personagem(int *classe_agente)
     printf("4. Características das classes\n");
     scanf("%d", classe_agente);  // Passar o endereço da variável classe_agente
 
+
+    // Adicionar os atributos das classes + 2 magias básicas
     if (*classe_agente == 4) {
         printf("Características de Classes:\n");
         printf("COMBATENTE\n");
@@ -91,14 +93,14 @@ int prologo_base()
         printf("No primeiro documento você encontra umas fotos da Torre de Londres dos últimos 20 anos, todas mostrando de algum ângulo\n"
                "uma imagem distorcida de uma mulher que pelos trajes indica que ela, em algum momento, era uma nobre.\n"
                "Além disso, havia uma suave diferença entre as fotos, por mais que a imagem sempre fosse daquela mulher, havia momentos em que"
-               "os seus olhos estavam vermelhos, outros estavam esbranquiçados.");
+               "os seus olhos estavam vermelhos, outros estavam esbranquiçados.\n");
         printf(" Atrás desse documento, você encontra também um relatório da Ocultos de 2010.\n");
         printf(" Nele constam jornais de 1910 até a data da missão relatando o desaparecimento de pessoas na época em que a imagem dessa mulher aparecia,\n"
                " o relatório diz que uma equipe com 3 membros da ordem foi designada para a missão, no entanto, apenas uma integrante voltou: Valquíria Andrade.\n"
                " No entanto, Valquíria não voltou sã da missão, os Ocultos tentaram todos os tratamentos psicológicos e psiquiátricos possíveis, mas nada adiantou.\n"
                " Seja lá o que tiver acontecido naquele local nunca foi reportado com exatidão. Desde então, a Ocultos evitou mandar novos agentes para lá,\n"
-               " além disso a imagem da mulher nunca mais apareceu, até agora."
-               " Você deverá ir a essa missão acompanhado de pelo menos um outro agente um pouco mais experiente que você.");
+               " além disso a imagem da mulher nunca mais apareceu, até agora.\n"
+               " Você deverá ir a essa missão acompanhado de pelo menos um outro agente um pouco mais experiente que você.\n");
         break;
 
     case 2:
@@ -198,10 +200,11 @@ int prologo_base()
 
     }
 
-int cena_chegada_torre(){
-
+int cena_chegada_castelo(){
+    // Umas partes destruídas -> - área de exploração
+    // Raul
     return 0;
-    
+
 }
 
 int main()
